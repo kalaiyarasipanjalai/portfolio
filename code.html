@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kalaiyarasi T | Software Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#bec6e0",
+                        "surface-container-high": "#1c2b3c",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-container": "#b3b1ff",
+                        "on-surface": "#d4e4fa",
+                        "surface-bright": "#2c3a4c",
+                        "on-primary": "#283044",
+                        "on-secondary": "#1d00a5",
+                        "inverse-on-surface": "#233143",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-background": "#d4e4fa",
+                        "on-tertiary-container": "#009365",
+                        "on-surface-variant": "#c6c6cd",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-low": "#0d1c2d",
+                        "tertiary-fixed": "#6ffbbe",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#e2dfff",
+                        "outline": "#909097",
+                        "inverse-surface": "#d4e4fa",
+                        "on-primary-container": "#798098",
+                        "secondary": "#c3c0ff",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-tertiary": "#003824",
+                        "on-error": "#690005",
+                        "surface-variant": "#273647",
+                        "on-tertiary-fixed": "#002113",
+                        "inverse-primary": "#565e74",
+                        "tertiary": "#4edea3",
+                        "error-container": "#93000a",
+                        "primary": "#bec6e0",
+                        "surface-container-highest": "#273647",
+                        "secondary-container": "#3626ce",
+                        "surface-container-lowest": "#010f1f",
+                        "outline-variant": "#45464d",
+                        "tertiary-container": "#001c10",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-dim": "#051424",
+                        "surface": "#051424",
+                        "on-secondary-fixed": "#0f0069",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "background": "#051424",
+                        "primary-container": "#0f172a",
+                        "surface-container": "#122131",
+                        "on-primary-fixed": "#131b2e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "1.5rem",
+                        "gutter": "24px",
+                        "xl": "6rem",
+                        "sm": "1rem",
+                        "margin-desktop": "auto",
+                        "xs": "0.5rem",
+                        "base": "4px",
+                        "lg": "3rem",
+                        "margin-mobile": "20px",
+                        "max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "display": ["Plus Jakarta Sans"],
+                        "code": ["monospace"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "code": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(144, 144, 151, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #bec6e0, #4edea3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-tertiary selection:text-surface-container-lowest">
+    <!-- TopNavBar -->
+    <header
+        class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant dark:border-outline-variant">
+        <div
+            class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+            <a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight"
+                href="#">KALAIYARASI T</a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+                    href="#experience">Experience</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+                    href="#skills">Skills</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+                    href="#projects">Projects</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+                    href="#education">Education</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+                    href="#leadership">Leadership</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+                    href="#contact">Contact</a>
+            </nav>
+            <a href="kalaiyarasi_resume_clean.pdf" download="Kalaiyarasi_T_Resume.pdf"
+                class="inline-block bg-primary text-on-primary font-label-md px-6 py-2 rounded-lg hover:bg-primary/90 transition-all duration-200 active:scale-95 text-center">
+                Download CV
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="relative pt-xl pb-lg px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="hero">
+            <div class="grid md:grid-cols-2 gap-lg items-center">
+                <div class="flex flex-col gap-sm">
+                    <div
+                        class="inline-flex items-center gap-xs px-3 py-1 bg-tertiary-container text-tertiary rounded-full w-fit">
+                        <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                        <span class="font-label-md text-label-md">Available for Opportunities</span>
+                    </div>
+                    <h1 class="font-display text-display text-gradient">Kalaiyarasi T</h1>
+                    <p class="font-headline-md text-headline-md text-on-surface-variant">Aspiring Software Engineer |
+                        B.Tech IT</p>
+                    <div class="grid grid-cols-3 gap-md my-md">
+                        <div class="p-sm glass-card rounded-xl border-l-4 border-tertiary">
+                            <span class="block font-headline-md text-headline-md text-on-surface">8.4</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant uppercase">CGPA</span>
+                        </div>
+                        <div class="p-sm glass-card rounded-xl border-l-4 border-primary">
+                            <span class="block font-headline-md text-headline-md text-on-surface">3</span>
+                            <span
+                                class="font-label-md text-label-md text-on-surface-variant uppercase">Internships</span>
+                        </div>
+                        <div class="p-sm glass-card rounded-xl border-l-4 border-secondary">
+                            <span class="block font-headline-md text-headline-md text-on-surface">3</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant uppercase">Core
+                                Projects</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-md mt-sm">
+                        <a href="kalaiyarasi_resume_clean.pdf" download="Kalaiyarasi_T_Resume.pdf"
+                            class="inline-block bg-primary text-on-primary font-label-md px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(190,198,224,0.3)] transition-all duration-300 text-center">Download
+                            Resume</a>
+                        <a class="border border-outline-variant text-on-surface font-label-md px-8 py-4 rounded-xl hover:bg-surface-container-high transition-all"
+                            href="#contact">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <div class="relative w-72 h-72 md:w-[450px] md:h-[450px]">
+                        <div
+                            class="absolute inset-0 rounded-full border-2 border-dashed border-tertiary/30 animate-[spin_20s_linear_infinite]">
+                        </div>
+                        <div
+                            class="absolute inset-4 rounded-full border border-primary/20 animate-[spin_15s_linear_infinite_reverse]">
+                        </div>
+                        <div
+                            class="absolute inset-8 rounded-full overflow-hidden p-2 bg-gradient-to-tr from-primary via-tertiary to-secondary">
+                            <img alt="Kalaiyarasi T professional headshot"
+                                class="w-full h-full object-cover rounded-full bg-surface-container-low"
+                                src="dp_img.jpeg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: Skills Matrix -->
+        <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="skills">
+            <div class="mb-lg">
+                <h2 class="font-headline-lg text-headline-lg mb-2">Technical Proficiency</h2>
+                <div class="h-1 w-20 bg-tertiary rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-md">
+                <div class="glass-card p-md rounded-xl space-y-md border-t-2 border-primary">
+                    <h3 class="font-label-md text-label-md text-primary uppercase">Languages</h3>
+                    <ul class="space-y-sm">
+
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-primary"></span>
+                            Python</li>
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-primary"></span> Dart
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card p-md rounded-xl space-y-md border-t-2 border-secondary">
+                    <h3 class="font-label-md text-label-md text-secondary uppercase">Web Dev</h3>
+                    <ul class="space-y-sm">
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            HTML / CSS</li>
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            JavaScript</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-md rounded-xl space-y-md border-t-2 border-tertiary">
+                    <h3 class="font-label-md text-label-md text-tertiary uppercase">Database</h3>
+                    <ul class="space-y-sm">
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                            MySQL</li>
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                            MongoDB</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-md rounded-xl space-y-md border-t-2 border-on-secondary-container">
+                    <h3 class="font-label-md text-label-md text-on-secondary-container uppercase">Concepts</h3>
+                    <ul class="space-y-sm">
+                        <li class="flex items-center gap-xs border-l-2 border-tertiary pl-2">OOPs</li>
+                        <li class="flex items-center gap-xs border-l-2 border-tertiary pl-2">DSA</li>
+                        <li class="flex items-center gap-xs border-l-2 border-tertiary pl-2">IoT</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-md rounded-xl space-y-md border-t-2 border-outline">
+                    <h3 class="font-label-md text-label-md text-outline uppercase">Tools</h3>
+                    <ul class="space-y-sm">
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-outline"></span> VS
+                            Code</li>
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-outline"></span> Figma
+                        </li>
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-outline"></span>
+                            Antigravity
+                        </li>
+                        <li class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-outline"></span>
+                            Stitch
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3: Experience -->
+        <section class="py-xl bg-surface-container-low/30" id="experience">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="mb-lg">
+                    <h2 class="font-headline-lg text-headline-lg mb-2">Professional Journey</h2>
+                    <div class="h-1 w-20 bg-primary rounded-full"></div>
+                </div>
+                <div
+                    class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-tertiary before:to-transparent">
+                    <!-- Item 1 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="material-symbols-outlined text-[20px]">code</span>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-md rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <time class="font-label-md text-primary">2025</time>
+                                <span class="text-xs bg-surface-container-high px-2 py-1 rounded">Remote</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Live Stream Technologies</h3>
+                            <div class="text-on-surface-variant mb-3">Web Development Intern</div>
+                            <p class="text-body-md text-on-surface-variant">Gained hands-on experience in backend
+                                development using Java. Learned the full-stack workflow and the Software Development
+                                Life Cycle (SDLC).</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-tertiary bg-background text-tertiary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="material-symbols-outlined text-[20px]">brush</span>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-md rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <time class="font-label-md text-tertiary">2023</time>
+                                <span class="text-xs bg-surface-container-high px-2 py-1 rounded">Hybrid</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Odugaatech Pvt. Ltd</h3>
+                            <div class="text-on-surface-variant mb-3">Web Design Intern</div>
+                            <p class="text-body-md text-on-surface-variant">Developed skills in frontend technologies:
+                                HTML, CSS, and JavaScript. Learned and applied principles of responsive and UI/UX
+                                design.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full border border-secondary bg-background text-secondary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="material-symbols-outlined text-[20px]">psychology</span>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-md rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <time class="font-label-md text-secondary">2022</time>
+                                <span class="text-xs bg-surface-container-high px-2 py-1 rounded">On-site</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Ally Tech</h3>
+                            <div class="text-on-surface-variant mb-3">Deep Learning Intern</div>
+                            <p class="text-body-md text-on-surface-variant">Applied foundational knowledge of deep
+                                learning and neural networks. Built and trained models using popular deep learning
+                                frameworks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: Projects -->
+        <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="projects">
+            <div class="mb-lg flex justify-between items-end">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg mb-2">Core Projects</h2>
+                    <div class="h-1 w-20 bg-secondary rounded-full"></div>
+                </div>
+                <a class="text-secondary font-label-md flex items-center gap-2 hover:underline" href="#">
+                    View all GitHub <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-md">
+                <!-- Project 1 -->
+                <div
+                    class="group glass-card rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+                    <div class="h-48 bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A sleek mobile application interface on a high-resolution screen, showing a dashboard with AI-driven statistics and clean typography. The UI is modern, using a dark theme with vibrant emerald and indigo accents, reflecting a high-end tech portfolio aesthetic. Soft ambient lighting illuminates the device in a dark room."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1O0D8UFz_iAAGo7Q85xa1XMN9JVxjC4FGsbqGT_UqT_jMl84QrJ_n8i-4LQMY1UPvwgy6y7RJPtsl74y8ImkRliwZs3-N4P09E1Go6Kqgf1WEf8C3b8XLCBaLiL0HPgJMZ9nGyHxQYsla2raAW7lyVyqkNPpsM6MHB3eSItAzGFqNvMVXBTlJP7U2n1ktzDgGRNBiPKFmChm1Kvj6aGxPYs3uiTEQfWqAgSqTrBEuHPiZ31j-udWgGKbir3QP_-jMCZKVZVCAMso" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-2 mb-sm">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-primary/10 text-primary rounded">Flutter</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-primary/10 text-primary rounded">Dart</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-tertiary/10 text-tertiary rounded">Gemini
+                                API</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-secondary/10 text-secondary rounded">Provider</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-secondary/10 text-secondary rounded">Shared
+                                Preferences</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2">Daily Distraction</h3>
+                        <p class="text-body-md text-on-surface-variant mb-md h-24 overflow-hidden">Vocabulary learning
+                            mobile app delivering 10 daily English words with Tamil translations, levels, and offline
+                            support, using Gemini API for recommendations.</p>
+                        <button
+                            class="w-full py-2 border border-outline-variant rounded-lg font-label-md text-on-surface hover:bg-surface-container-high transition-colors">Case
+                            Study</button>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div
+                    class="group glass-card rounded-xl overflow-hidden hover:border-tertiary/50 transition-all duration-300">
+                    <div class="h-48 bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="An advanced agricultural drone flying over a vibrant green field at sunrise. The drone is equipped with high-tech sensors and cameras. The image has a cinematic feel with warm sunlight flaring from the horizon, highlighting the intersection of technology and nature in a futuristic, sustainable farming context."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRvLCuGFbUKTOnl1LvHBUU_-3N5c8OQ2WZ056fJ5akqAt8bGEiM_6ICUA4gRvQrlG0cZi3w9mFT9JklqQRRApCpis4l-ECnNUHutF3p447spl2aEBaLXLpNQmq1x9EUlQ5CoLpBap9fMmpIiduHsHuJGgSmrj-n2yoiR9GSkQk44qm7V7KHf7G0yhI0-XhdFsW6Y4VYoJBb7DSkR6SlaxHQUghyv8L6IaiMVNoxvQ-25_YMGp4a9L0H7GScovsO7iJQeeNlCGuQ4" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-2 mb-sm">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-tertiary/10 text-tertiary rounded">IoT</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-tertiary/10 text-tertiary rounded">Raspberry
+                                Pi</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-secondary/10 text-secondary rounded">CNN</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-secondary/10 text-secondary rounded">Wi-Fi</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-outline/20 text-on-surface rounded">Ongoing</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2">AI Drone for Agriculture</h3>
+                        <p class="text-body-md text-on-surface-variant mb-md h-24 overflow-hidden">A drone using an AI
+                            camera to find pests and crop diseases in real-time, sending instant alerts and analysis to
+                            farmers.</p>
+                        <button
+                            class="w-full py-2 border border-outline-variant rounded-lg font-label-md text-on-surface hover:bg-surface-container-high transition-colors">Technical
+                            Docs</button>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div
+                    class="group glass-card rounded-xl overflow-hidden hover:border-secondary/50 transition-all duration-300">
+                    <div class="h-48 bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A professional digital workspace featuring a laptop with a code editor open, displaying complex Dart scripts. The background is softly blurred, showing a modern home office setup with minimalist decor and cool-toned lighting. The scene emphasizes productivity, high-level software engineering, and technical mastery."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu5kVrYmoVTfOq1vXfHWzlE_8-DFDp9m17SDTOYcNbO6U9CQmq4YI6uOHuFlXWPijf3mmDZ9rDEyNP7LlgLlBdbXIZ0R6wexbguIdOFeabKUE69d5tc3_d-hFWYjHDOafRwkjFSrJO2jX59PPTXUTqZapOoXy8P6YS8D2hIqz_rRtWIB14uEaruEzATRzKwB2cViw44QrB9Z24YbGgEg038FyVHdf_x9wQX3YyiNoxQwI3e1H3XJtwB_FLucXlOWRybuy-2eKcB1g" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-2 mb-sm">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-secondary/10 text-secondary rounded">Dart</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-primary/10 text-primary rounded">GitHub
+                                API</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-tertiary/10 text-tertiary rounded">Hugging
+                                Face AI</span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-outline/20 text-on-surface rounded">Ongoing</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-2">LinkedIn Post Generator</h3>
+                        <p class="text-body-md text-on-surface-variant mb-md h-24 overflow-hidden">An AI tool that reads
+                            a user's GitHub projects and automatically writes engaging, professional LinkedIn posts
+                            about them.</p>
+                        <button
+                            class="w-full py-2 border border-outline-variant rounded-lg font-label-md text-on-surface hover:bg-surface-container-high transition-colors">Github
+                            Repo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5: Education -->
+        <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="education">
+            <div class="mb-lg">
+                <h2 class="font-headline-lg text-headline-lg mb-2">Education Background</h2>
+                <div class="h-1 w-20 bg-on-secondary-container rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-[1.5fr,1fr] gap-md">
+                <div class="glass-card p-lg rounded-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-[120px]">school</span>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="font-label-md text-secondary mb-2 block">2022 — 2026</span>
+                        <h3 class="font-headline-lg text-headline-lg mb-2">B.Tech Information Technology</h3>
+                        <p class="font-headline-md text-headline-md text-on-surface-variant mb-4">Mahendra Engineering
+                            College for Women, Namakkal</p>
+                        <div class="inline-flex items-center gap-4 py-2 px-4 bg-secondary/10 rounded-lg">
+                            <span class="font-headline-md text-secondary">8.4</span>
+                            <span class="text-sm font-label-md text-on-surface-variant">Cumulative Grade Point
+                                Average</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-md">
+                    <div class="glass-card p-md rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">HSC / XII
+                                — 74.8%</span>
+                            <h4 class="font-headline-md text-headline-md">Govt. Girls Higher Secondary School</h4>
+                            <p class="text-xs text-outline">Kallakurichi | 2021 — 2022</p>
+                        </div>
+                        <span class="material-symbols-outlined text-outline">verified</span>
+                    </div>
+                    <div class="glass-card p-md rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">SSLC / X —
+                                63.5%</span>
+                            <h4 class="font-headline-md text-headline-md">Govt. ADW High School</h4>
+                            <p class="text-xs text-outline">Niraimathi | 2019 — 2020</p>
+                        </div>
+                        <span class="material-symbols-outlined text-outline">verified</span>
+                    </div>
+                    <div class="bg-primary/5 border border-primary/20 p-md rounded-xl">
+                        <p class="text-sm text-on-surface-variant italic">"Commitment to continuous learning and
+                            academic excellence across all fundamental disciplines of IT."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 6: Beyond Code -->
+        <section class="py-xl bg-surface-container-lowest" id="leadership">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="mb-lg text-center">
+                    <h2 class="font-headline-lg text-headline-lg mb-2">Beyond The Code</h2>
+                    <p class="text-on-surface-variant">Leadership and extracurricular achievements</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-md">
+                    <div
+                        class="flex gap-md glass-card p-lg rounded-2xl group hover:bg-surface-container-high transition-colors">
+                        <div
+                            class="w-16 h-16 rounded-full bg-tertiary/20 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">sports_kabaddi</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md mb-2">Sports Excellence</h3>
+                            <p class="text-body-md text-on-surface-variant mb-2">Kabaddi Zonal Winner & District Runner
+                            </p>
+                            <p class="text-sm text-outline">Demonstrated teamwork, resilience, and strategic thinking
+                                through competitive sports at both district and zonal levels.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-md glass-card p-lg rounded-2xl group hover:bg-surface-container-high transition-colors">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">groups</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md mb-2">Leadership Roles</h3>
+                            <p class="text-body-md text-on-surface-variant mb-2">Class Representative & Event Organizer
+                            </p>
+                            <p class="text-sm text-outline">Served as Class Representative in 2nd year. Recently
+                                organized a reunion trip for 25 friends, demonstrating group management, communication,
+                                and planning skills.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-md glass-card p-lg rounded-2xl group hover:bg-surface-container-high transition-colors">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">psychology</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md mb-2">Personal Strengths</h3>
+                            <p class="text-body-md text-on-surface-variant mb-2">Active, Good Listener & Eager to Learn
+                            </p>
+                            <p class="text-sm text-outline">Task-driven and completion-oriented. Enjoy helping others,
+                                listening carefully to requirements, and continuously learning new technologies.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-md glass-card p-lg rounded-2xl group hover:bg-surface-container-high transition-colors">
+                        <div
+                            class="w-16 h-16 rounded-full bg-on-secondary-container/20 flex items-center justify-center text-on-secondary-container group-hover:scale-110 transition-transform shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">translate</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md mb-2">Languages</h3>
+                            <p class="text-body-md text-on-surface-variant mb-2">Tamil & English</p>
+                            <p class="text-sm text-outline">Fluent and effective communication in both languages,
+                                enabling seamless collaboration in diverse team environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 7: Contact -->
+        <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="contact">
+            <div class="glass-card rounded-[2rem] p-lg md:p-xl text-center relative overflow-hidden">
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+                <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-tertiary/10 blur-[100px] rounded-full"></div>
+                <h2 class="font-display text-headline-lg mb-md relative z-10">Let's build something <span
+                        class="text-tertiary">extraordinary</span> together.</h2>
+                <p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg relative z-10">I am currently
+                    looking for internship and entry-level opportunities in Software Development. Feel free to reach out
+                    for collaborations or just a friendly hello!</p>
+                <div class="flex flex-wrap justify-center gap-md relative z-10">
+                    <a class="flex items-center gap-3 bg-surface-container px-6 py-3 rounded-full border border-outline-variant hover:border-primary transition-all group"
+                        href="mailto:kalaiyarasi82005@gmail.com">
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+                        <span class="font-label-md">kalaiyarasi82005@gmail.com</span>
+                    </a>
+                    <a class="flex items-center gap-3 bg-surface-container px-6 py-3 rounded-full border border-outline-variant hover:border-tertiary transition-all group"
+                        href="tel:+919698844921">
+                        <span
+                            class="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">call</span>
+                        <span class="font-label-md">+91 9698844921</span>
+                    </a>
+                </div>
+                <div class="flex justify-center gap-lg mt-xl relative z-10">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors flex flex-col items-center gap-2"
+                        href="#">
+                        <span
+                            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+                            <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="text-xs uppercase tracking-widest font-bold">GitHub</span>
+                    </a>
+                    <a class="text-on-surface-variant hover:text-secondary transition-colors flex flex-col items-center gap-2"
+                        href="#">
+                        <span
+                            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center">
+                            <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="text-xs uppercase tracking-widest font-bold">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+        <div
+            class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl flex flex-col md:flex-row justify-between items-center gap-md">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="font-headline-md text-headline-md font-bold text-on-surface">Kalaiyarasi T</span>
+                <p class="font-label-md text-label-md text-on-surface-variant">© 2026 Kalaiyarasi T. Built for
+                    performance.</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">LinkedIn</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">GitHub</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="mailto:kalaiyarasi82005@gmail.com">Email</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions and hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
